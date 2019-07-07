@@ -1,0 +1,205 @@
+
+
+* {
+  box-sizing: border-box;
+}
+.p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  list-style: none;
+}
+
+div {
+  display: block;
+}
+
+.header{
+  background-color: #38aef0;
+  height:20px;
+  width:100%;
+  color:white;
+  text-align: center;
+}
+
+.chat-side {
+  width: 300px;
+  color: white;
+  float: left;
+  .side-header {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      &__user-name {
+        font-size: 16px;
+      }
+
+      &__menu{
+        &__new-group{
+          margin-left: 0.3rem;
+          float:left;
+          color:white;
+          &__icon{
+            color:white;
+            padding-right:5px;
+          }
+        }
+        &__edit-user{
+          float:left;
+          &__icon{
+            color:white;
+          }
+          
+        }
+      }
+    }
+  }
+  .side-groups {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    overflow: scroll;
+    &__group{
+      margin-bottom: 40px;
+      &__group-name{
+        color:white;
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      &__latest-message{
+        font-size: 11px;
+        color:white;
+      }
+    }
+  }
+}
+
+.chat-main {
+  width: calc(100vw - 300px);
+  float: left;
+  .main-header{
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+    overflow: scroll;
+    &__left-box{
+      margin-top: 35px;
+      &__current-group{
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      &__member-list{
+        display: flex;
+        font-size: 12px;
+        color: #999999;
+        &__member{
+          list-style: none;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+    .main-header__edit-btn{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin-top: 28px;
+    border: solid 1px #38aef0;
+    position: absolute;
+    right: 40px;
+    color:#38aef0;
+    }
+  }
+  .messages{
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    overflow: scroll;
+    .message{
+      padding-bottom: 40px;
+      &__upper-info{
+        display: flex;
+        margin-bottom: 10px;
+        &__talker{
+        color: #434a54;
+        font-size: 16px;
+        font-weight: bold;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__text{
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .form{
+    .tag{
+      width: 100%;
+      display: flex;
+    }
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #ddd;
+    display: flex;
+   .input-box{
+    position: relative;
+    width: 100%;
+    &__text{
+      height: 50px;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
+    }
+    .label {
+      cursor: pointer;
+    }
+    .fa-image{
+      position: absolute;
+      top:17px;
+      right:10px;
+    }
+    .file {
+      display: none;
+    }
+
+  } 
+   .submit-btn{
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: white;
+    cursor: pointer;
+   }
+  }
+}
+
+
+
+
+
+
+
