@@ -7,10 +7,10 @@
         hayato
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          =link_to "/groups/new" do
+          =link_to "#" do
             = fa_icon 'edit', class: 'side-header__box__menu__new-group__icon'
         %li.side-header__box__menu__edit-user
-          =link_to "/users/997/edit" do
+          =link_to "#" do
             = fa_icon 'cog',class: 'side-header__box__menu__edit-user__icon'
           
 
@@ -61,10 +61,10 @@
   .form
     %form.tag
       .input-box
-        %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-        %label.input-box__image{:for => "message_image", :class => "label"}
+        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+        %label.input-box__image{for: "message_image", class: "label"}
           %i.fa.fa-image.fa-lg
-            %input.file{:type => "file", :id => 'message_image'}
-      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+            %input.file{type: "file",id: 'message_image'}
+      %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit",value: "Send"}/
 
 
