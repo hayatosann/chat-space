@@ -1,0 +1,70 @@
+.header
+  グループを作成しました
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name 
+        hayato
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          =link_to "#" do
+            = fa_icon 'edit', class: 'side-header__box__menu__new-group__icon'
+        %li.side-header__box__menu__edit-user
+          =link_to "#" do
+            = fa_icon 'cog',class: 'side-header__box__menu__edit-user__icon'
+          
+
+  .side-groups
+    .side-groups__group
+      %p.side-groups__group__group-name
+        hayato
+      %p.side-groups__group__latest-message
+        画像が投稿されています
+
+    .side-groups__group
+      %p.side-groups__group__group-name
+        sasano
+      %p.side-groups__group__latest-message
+        画像が投稿されています
+
+    .side-groups__group
+      %p.side-groups__group__group-name
+        yaaa
+      %p.side-groups__group__latest-message
+        画像が投稿されています
+
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group 
+        a
+      %ul.main-header__left-box__member-list
+        Member :
+        %li.main-header__left-box__member-list__member
+        %li.main-header__left-box__member-list__member
+    
+    .main-header__edit-btn
+      Edit
+        
+
+
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+          sasano
+        %p.message__upper-info__date
+          2019/7/7
+      %p.message__text
+        cc
+
+  .form
+    %form.tag
+      .input-box
+        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+        %label.input-box__image{for: "message_image", class: "label"}
+          %i.fa.fa-image.fa-lg
+            %input.file{type: "file",id: 'message_image'}
+      %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit",value: "Send"}/
+
+
