@@ -13,20 +13,21 @@
           
 
   .side-groups
-    .side-groups__group
-      %p.side-groups__group__group-name
-        hayato
-      %p.side-groups__group__latest-message
-        画像が投稿されています
+    - current_user.groups.each do |group|
+      .side-groups__group
+        = link_to group_messages_path(group) do
+          .side-groups__group__group-name
+            = group.name
+          .side-groups__group__latest-message
+            メッセージはまだありません。
 
-    .side-groups__group
-      %p.side-groups__group__group-name
-        sasano
-      %p.side-groups__group__latest-message
-        画像が投稿されています
 
-    .side-groups__group
-      %p.side-groups__group__group-name
-        yaaa
-      %p.side-groups__group__latest-message
-        画像が投稿されています
+ 
+
+
+
+
+
+
+
+
