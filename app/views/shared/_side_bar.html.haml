@@ -1,0 +1,32 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name 
+        = current_user.name
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          =link_to "#" do
+            = fa_icon 'edit', class: 'side-header__box__menu__new-group__icon'
+        %li.side-header__box__menu__edit-user
+          =link_to "#" do
+            = fa_icon 'cog',class: 'side-header__box__menu__edit-user__icon'
+          
+
+  .side-groups
+    .side-groups__group
+      %p.side-groups__group__group-name
+        hayato
+      %p.side-groups__group__latest-message
+        画像が投稿されています
+
+    .side-groups__group
+      %p.side-groups__group__group-name
+        sasano
+      %p.side-groups__group__latest-message
+        画像が投稿されています
+
+    .side-groups__group
+      %p.side-groups__group__group-name
+        yaaa
+      %p.side-groups__group__latest-message
+        画像が投稿されています
