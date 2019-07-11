@@ -16,22 +16,17 @@
 
 
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          sasano
-        %p.message__upper-info__date
-          2019/7/7
-      %p.message__text
-        cc
-
+    = render @messages
+        
   .form
-    %form.tag
-      .input-box
-        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
-        %label.input-box__image{for: "message_image", class: "label"}
-          %i.fa.fa-image.fa-lg
-            %input.file{type: "file",id: 'message_image'}
-      %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit",value: "Send"}/
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
 
+  
 
+  
