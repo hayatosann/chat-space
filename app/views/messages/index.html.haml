@@ -11,7 +11,7 @@
         %li.main-header__left-box__member-list__member
     
     .main-header__edit-btn
-      Edit
+      =link_to 'EDIT',"/groups/#{@group.id}/edit", class: "main-header__edit-btn__link", method: :get 
         
 
 
