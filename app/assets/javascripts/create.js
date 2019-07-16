@@ -49,7 +49,8 @@ $(function() {
     })
 
     .fail(function() {
-　   alert('error');
+      alert('error');
+      $(".form__submit").prop('disabled', false);
     })
 
   })
