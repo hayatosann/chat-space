@@ -4,9 +4,11 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group 
-        a
+        = @group.name
       %ul.main-header__left-box__member-list
         Member :
+        - @group.users.each do |groupuser|
+          = groupuser.name
         %li.main-header__left-box__member-list__member
         %li.main-header__left-box__member-list__member
     
