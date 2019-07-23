@@ -28,6 +28,8 @@
             %input.chat_group{name: 'group[user_ids][]',type: 'hidden', value: "#{groupuser.id}"}
             %p.chat-group-user__name
               = groupuser.name
+            - unless groupuser.id == current_user.id
+              %a.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
       
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
