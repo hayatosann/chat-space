@@ -1,4 +1,6 @@
 # chatspace
+
+# URL: http://13.230.82.90/
 ## membersテーブル
 
 |Column|Type|Options|
